@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-mist: #DCE9F0;
+  --color-sage: #AEC6C6;
+  --color-clay: #D9C9BA;
+  --color-linen: #ECE2DB;
+  --color-paper: #EDEBEB;
+  --ink: #2f3436; /* 텍스트는 팔레트에 없는 색이 필요해 최소한의 짙은 회색만 별도 허용 */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.input {
+  width: 100%;
+  border: 1px solid var(--color-sage);
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.input:focus {
+  border-color: var(--color-clay);
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--ink);
+}
+
+.markdown-body h1 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-sage);
+}
+
+.markdown-body h2 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #445;
+}
+
+.markdown-body h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 1.1rem;
+  margin-bottom: 0.35rem;
+}
+
+.markdown-body p {
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+.markdown-body ul {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.markdown-body li {
+  line-height: 1.7;
+  margin-bottom: 0.25rem;
+}
+
+.markdown-body strong {
+  font-weight: 700;
+}
+
+.markdown-body hr {
+  border: none;
+  border-top: 1px dashed var(--color-sage);
+  margin: 1.25rem 0;
+}
+
+.markdown-body blockquote {
+  background: var(--color-mist);
+  border-left: 3px solid var(--color-sage);
+  padding: 0.5rem 0.85rem;
+  border-radius: 0.5rem;
+  margin: 0.75rem 0;
+  font-size: 0.9rem;
+}
+
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+  font-size: 0.9rem;
+}
+
+.markdown-body th,
+.markdown-body td {
+  border: 1px solid var(--color-sage);
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+}
+
+.markdown-body th {
+  background: var(--color-linen);
+}
